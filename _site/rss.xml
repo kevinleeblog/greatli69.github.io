@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+        <title>Kevin Blog-超越極限</title>
+        <description>Kevin Blog-超越極限 - Kevin Lee</description>
+        <link>http://greatli69.github.io</link>
+        <atom:link href="http://greatli69.github.io/rss.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Wed, 28 Nov 2018 14:56:44 +0800</lastBuildDate>
+        <pubDate>Wed, 28 Nov 2018 14:56:44 +0800</pubDate>
+        <ttl>60</ttl>
+
+
+        <item>
+                <title>solve undefined symbol</title>
+                <description>
+&lt;p&gt;當執行程式時，呼叫到動態函式庫時，發生undefined symbol錯誤&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/../../../assets/themes/image-20181128093116051.png&quot; alt=&quot;image-20181128093116051&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;主要是libnss_ipmi.so.2會呼叫到shared library, libusrauth.so，但不知為何找不到
+Library 有存放到系統可以呼叫的位址&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/../../../assets/themes/image-20181128093558628.png&quot; alt=&quot;image-20181128093558628&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;檢查libuserauth.so
+$ readelf -d libnss_ipmi.so.6.0.0&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/../../../assets/themes/image-20181128093740748.png&quot; alt=&quot;image-20181128093740748&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;上圖，確實有缺少了libuserauth的共享函式庫&lt;/p&gt;
+
+&lt;p&gt;檢查libnss-ipmi的Source Code，以下操作都是在Yocto提供的指令操作&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ devtool modify libnss-ipmi
+$ cd workspace/sources/libnss-ipmi  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;檢查libuserauth Makefile，可以發現有link到libuserauth Library&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/../../../assets/themes/image-20181128094322499.png&quot; alt=&quot;image-20181128094322499&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;編譯可以過，但執行時還是缺少此shared library&lt;/p&gt;
+
+</description>
+                <link>http://greatli69.github.io/2018/11/28/solve-undefined-symbol</link>
+                <guid>http://greatli69.github.io/2018/11/28/solve-undefined-symbol</guid>
+                <pubDate>Wed, 28 Nov 2018 00:00:00 +0800</pubDate>
+        </item>
+
+
+</channel>
+</rss>
