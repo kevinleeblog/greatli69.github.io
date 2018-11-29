@@ -34,3 +34,4 @@ $ cd workspace/sources/libnss-ipmi
 
 編譯可以過，但執行時還是缺少此shared library
 
+參照下行改寫就行了。
