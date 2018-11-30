@@ -3,7 +3,7 @@ layout: post
 title: "Yocto寫一個Shared library的Recipe"
 author:     Kevin Lee
 tags: 		Yocto
-subtitle:   了解如何去寫Recipe
+subtitle:   學習Shared Library Recipe如何去寫
 category:  project1
 visualworkflow: true
 ---

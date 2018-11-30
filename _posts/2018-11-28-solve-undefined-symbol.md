@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "處理動態函式庫undefined symbol錯誤"
+title:      "動態函式庫undefined symbol錯誤處理"
 author:     Kevin Lee
 tags: 		Linux
 subtitle:   
