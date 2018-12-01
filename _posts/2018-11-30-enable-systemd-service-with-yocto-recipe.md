@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Yocto寫一個systemd service recipe"
+title: "Add systemd service to recipe"
 author:     Kevin Lee
-tags: 		Yocto
-subtitle:   學習Systemd Service Recipe如何去寫
+tags: 		Yocto-Study
+subtitle:   
 category:  project1
 visualworkflow: true
 ---

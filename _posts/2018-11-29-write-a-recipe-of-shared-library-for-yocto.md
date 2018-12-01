@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Yocto寫一個Shared library的Recipe"
+title: "Add shared library to recipe"
 author:     Kevin Lee
-tags: 		Yocto
-subtitle:   學習Shared Library Recipe如何去寫
+tags: 		Yocto-Study
+subtitle:   
 category:  project1
 visualworkflow: true
 ---

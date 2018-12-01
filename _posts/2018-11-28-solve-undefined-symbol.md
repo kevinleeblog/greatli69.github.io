@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "動態函式庫undefined symbol錯誤處理"
+title:      "undefined symbol執行錯誤"
 author:     Kevin Lee
-tags: 		Linux
+tags: 		Yocto-Study
 subtitle:   
 category:  project1
 visualworkflow: true  
