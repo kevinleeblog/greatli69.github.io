@@ -2,7 +2,7 @@
 layout: post
 title: "Enable SPX Debug Messages"
 author:     Kevin Lee
-tags: 		AMI SPX
+tags: 		BMC SPX
 subtitle:   
 category:  project1
 visualworkflow: true
